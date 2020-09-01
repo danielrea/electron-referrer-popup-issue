@@ -4,7 +4,10 @@
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start:appone": "set PORT=3003 && npm start --prefix ./app-one",
+    "start:apptwo": "set PORT=3004 && npm start --prefix ./app-two",
+    "start:electron": "electron .",
+    "start": "concurrently \"npm run start:appone\" \"npm run start:apptwo\" \"npm run start:electron\""
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
