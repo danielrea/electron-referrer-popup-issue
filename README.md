@@ -8,3 +8,9 @@ npm i
 cd ../
 npm run start
 ```
+
+What is Happening:
+Electron is loading localhost:3003 which then uses window.open to localhost:3004. Localhost:3004 has an undefined document.referrer
+
+Expected Behaviour:
+document.referrer should be set to localhost:3003
